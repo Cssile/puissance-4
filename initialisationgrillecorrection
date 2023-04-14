@@ -1,0 +1,53 @@
+def display_grid(grid):
+    for line_number in range(len(grid)):
+        result = str(line_number)
+        for col_number in range(len(grid[0])):
+            result = result + " " + grid[line_number][col_number]
+        print(result)
+
+    result = " "
+    for col_number in range(len(grid[0])):
+        result = result + " " + str(col_number)
+    print(result)
+
+tableau = [
+    [".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "."],
+    [".", ".", ".", ".", "."]
+]
+display_grid(tableau)
+
+def gameplayer(tableau,player):
+
+    if player == "L":
+        return True
+    return False
+
+def gameplayer (tableau,player):
+    if player == "0":
+        return True
+    return False
+    
+
+   
+winner = None
+player = "O"
+
+#tant que l 'on a pas de gagnant, on joue
+while winner == None :
+    print(player)
+    if gameplayer (tableau,player) == True: 
+        winner == player
+    #logique de switch de joueurs
+    else :
+        if player == "0":
+           player == "L"
+        else :
+            player == "L"
+if player == winner :
+    print("Bravo joueur" + winner + display_grid)
+            
+
+
